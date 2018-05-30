@@ -185,12 +185,12 @@ patview.unzip.file <- function(zipfile
 ## Calculates number of lines a file has
 get.file.nlines <- function(file.name, dir.path = getwd()) {
     file.name %>%
-        file.path(dir.path, .) %>% 
+        file.path(dir.path, .) %>%
+        normalizePath %>% 
         paste("grep -c $", .) %>%
         system(intern = TRUE) %>%
         as.numeric
 }
-
 
 ## Tests
 ## "patview-data-tsv/nber.category.tsv" %>% get.file.nlines
@@ -228,10 +228,14 @@ patview.save.rds <- function(file
             saveRDS(file = file.rds.path)
         return(file.rds.path)
     } else {
-        if(file.lines == 0) file.lines <- get.file.nlines(file, dir)
+        if(file.lines == 0) {
+            message("Counting lines in the input file...")
+            file.lines <- get.file.nlines(file, dir)
+            message("The file '", file, "' has - ", file.lines, " lines.")
+        }
         batch.file.format <- paste0("%0", nchar(file.lines), "d")
         ## Set start read rows for fread
-        rows.skip <- seq(from = 0
+        rows.skip <- seq(from = 1
                        , to = file.lines
                        , by = batch.lines)
         rows.read <- rows.skip[-1] %>%

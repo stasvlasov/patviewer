@@ -3,7 +3,7 @@ Title: Tools for working with PatentsView.org database
 Version: 0.0.0.9000
 Authors@R: 'Stas Vlasov <s.vlasov@uvt.nl> [aut, cre]'
 Description: Set of functions that help to prepare, to load into R session and to search PatentsView.org data
-Depends: R (>= 3.5.0)
+Depends: R (>= 3.4.0)
 License: MIT License
 Encoding: UTF-8
 LazyData: true
