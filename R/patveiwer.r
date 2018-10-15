@@ -223,8 +223,18 @@ patview.save.rds <- function(file
             message("File ", file, " exists. Delete it if you want to replace.")
             return()
         }
+        field.names <- 
+            file.path(dir, file) %>%
+            fread(nrows = 1
+                , header = FALSE) %>%
+            make.names
         file.path(dir, file) %>%
-            fread(stringsAsFactors = FALSE) %>%
+            fread(showProgress = TRUE
+                , strip.white = FALSE
+                , quote = ""
+                , sep = "\t"
+                , stringsAsFactors = FALSE
+                , colClasses = rep("character", length(field.names))) %>%
             saveRDS(file = file.rds.path)
         return(file.rds.path)
     } else {
@@ -273,6 +283,7 @@ patview.save.rds <- function(file
                         , colClasses = rep("character", length(field.names))) %>%
                     set_names(field.names) %>% 
                     saveRDS(file.rds.path)
+                gc()
                 message("  - Done! (in ", as.numeric(Sys.time() - started) %>% round, " minutes)")
             }
             return(file.rds.path)
@@ -284,6 +295,7 @@ patview.save.rds <- function(file
 
 
 ## Tests
+## "nber.category.tsv" %>% patview.save.rds
 ## "nber.category.tsv" %>% patview.save.rds(batch.lines = 2)
 ## readRDS("patview-data-rds/nber.category-4-5.rds")
 
@@ -302,15 +314,30 @@ patview.save.rds <- function(file
 #' @import pbapply magrittr data.table dplyr
 #' @export
 patview.filter <- function(file.pattern, ...
-                         , file.dir = file.path(getwd(), "patview-data-rds")) {
-    file.dir %>%
-        file.path(list.files(., pattern = file.pattern)) %>%
-        pblapply(function(file.path)
-            file.path %>%
-            readRDS %>% 
-            filter(...)) %>%
-        rbindlist %>% 
-        return
+                         , file.dir = file.path(getwd(), "patview-data-rds")
+                         , pbapply = TRUE
+                         , cols = character(0)) {
+    if(pbapply) {
+        file.dir %>%
+            file.path(list.files(., pattern = file.pattern)) %>%
+            pblapply(function(file.path) 
+                file.path %>%
+                readRDS %>% 
+                filter(...) %>%
+                select(if(cols %>% is.0) everything() else cols)) %>% 
+            rbindlist %>% 
+            return
+    } else {
+        file.dir %>%
+            file.path(list.files(., pattern = file.pattern)) %>%
+            lapply(function(file.path) 
+                file.path %>%
+                readRDS %>% 
+                filter(...) %>%
+                select(if(cols %>% is.0) everything() else cols)) %>% 
+            rbindlist %>% 
+            return
+    }
 }
 ## --------------------------------------------------------------------------------
 
@@ -320,12 +347,4 @@ patview.filter <- function(file.pattern, ...
 ## "nber.category.rds" %>% patview.filter(TRUE)
 ## "nber.category.rds" %>% patview.filter(id == 4)
 ## "nber.category" %>% patview.filter(str_detect(title, "m"))
-
-
-
-
-
-
-
-
-
+## "nber.category.rds" %>% patview.filter(TRUE, select.fields = c("title", "id"))
