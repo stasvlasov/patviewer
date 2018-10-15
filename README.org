@@ -1,0 +1,44 @@
+#+title: patviewer
+#+author: Stas Vlasov
+#+email: s.vlasov@uvt.nl
+
+~patviewer~ is a simple R package that allow to quicky set up [[http://www.patentsview.org/download/][bulk PatentsView.org dataset]] and provides couple of convinience tools to use it as if all data is in your RAM (using ~patview.filter~).
+
+* Installation
+
+#+BEGIN_SRC R
+  ## Loads devtools and installs it if not yet installed
+  if (!require("devtools", character.only = TRUE)) {
+      install.packages("devtools", repos = 'http://cloud.r-project.org')
+      library("devtools", character.only = TRUE)
+  }
+  ## Installs and loads patviewer
+  install_github("stasvlasov/patviewer")
+  library("patviewer")
+#+END_SRC
+
+* Usage
+
+Available functions:
+
+| ~patview.get.files.list~      | Gets list of files from PatentsView.org that are available for download        |
+| ~patview.download.files.list~ | Downloads list of files from PatentsView.org that are available for download   |
+| ~patview.download.file~       | Downloads PatentsView.org files                                                |
+| ~patview.unzip.file~          | Unzips (PatentsView.org bulk data) files.                                      |
+| ~patview.save.rds~            | Reads PatentsView .tsv files and saves them to .rds (also optional in batches) |
+| ~patview.filter~              | Filter tables of PatentsView.org bulk data (same usage as dplyr)               |
+
+* References
+
+From "About" http://www.patentsview.org:
+
+#+BEGIN_QUOTE
+PatentsView is a patent data visualization and analysis platform intended to increase the value, utility, and transparency of US patent data. The initiative is supported by the Office of Chief Economist in the US Patent & Trademark Office (USPTO)
+
+The PatentsView initiative was established in 2012 and is a collaboration between USPTO, US Deptartment of Agriculture (USDA)(1), the Center for the Science of Science and Innovation Policy, New York University, the University of California at Berkeley, Twin Arch Technologies, and Periscopic.
+
+The PatentsView platform is built on a newly developed database that longitudinally links inventors, their organizations, locations, and overall patenting activity. The platform uses data derived from USPTO bulk data files. These data are provided for research purposes and do not constitute the official USPTO record. The data visualization tool, query builder, bulk downloads, and flexible API enable a broad spectrum of users to examine the dynamics of inventor patenting activity over time and space. They also permit users to explore patent technologies, assignees, citation patterns and co-inventor networks.
+
+For researchers in particular, PatentsView is intended to encourage the study and understanding of the intellectual property (IP) and innovation system; to serve as a fundamental function of the government in creating “public good” platforms in these data; and to eliminate redundant cleaning, converting and matching of these data by individual researchers, thus freeing up researcher time to do what they do best—study IP, innovation, and technological change.
+
+#+END_QUOTE
