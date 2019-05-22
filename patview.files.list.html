@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>PatentsView Data Download</title> <link href="//www.patentsview.org/web/css/reset.css" rel="stylesheet"/>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700" rel="stylesheet" type="text/css"/>
+<link href="//patentsview.org/web/favicon.ico" rel="icon" type="image/x-icon"/> <link href="//www.patentsview.org/web/css/download.css?v=0.01" rel="stylesheet">
+<link href="//www.patentsview.org/web/css/headfoot.css" rel="stylesheet"/>
+<link href="//www.patentsview.org/web/css/download_new.css" rel="stylesheet"/>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-90540397-1', 'auto');
+        ga('send', 'pageview', {/*sequence*/ metric1: 0});
+        </script>
+</link></head>
+<body>
+<header class="med-header"></header>
+<div class="center-content">
+<aside class="overview">
+<h5>Most Recent Data Updates:</h5>
+<p class="one-line"><em>November 27, 2018</em></p>
+<h5>Description</h5>
+<p>PatentsView database tables can be bulk downloaded as individual files in tab delimited format for programmers and researchers who prefer to work with the data in their native environments.</p><p> The <a href="http://www.patentsview.org/data/Patents_DB_dictionary_bulk_downloads.xlsx">data dictionary</a> contains detailed information on the tables, data elements and their definitions.</p>
+<a class="gradient-blue-gray" href="https://creativecommons.org/licenses/by/4.0/" style="text-decoration:none;" target="_blank"><h4 class="creative-commons-header">Licensed By</h4><p class="creative-commons-logo">Creative Commons License</p></a><p class="creative-commons-text">All content is licensed under a <a class="creative-commons-link" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons</a> Attribution 4.0 License.</p>
+</aside>
+<section class="mainContent">
+<h2>Data Download Tables</h2>
+<table>
+<tr><th class="table-name">Table Name</th><th class="table-description">Description</th><th class="table-num-rows"># of Rows</th><th class="table-origin">Origin</th></tr>
+<tr><td><a href="https://s3.amazonaws.com/data.patentsview.org/20181127/download/inventor_gender.tsv.zip" target="_blank">Inventor Gender</a><span class="filesize">23.8 MB</span></td><td>Gender assignment of disambiguated inventor. <a href="http://data.patentsview.org/documents/On-line+Appendix+-+Gender+Attribution+of+USPTO+Inventors.pdf"> Methods Report</a></td><td>3,772,032</td><td>disamb</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/application.tsv.zip" target="_blank">application</a><span class="filesize">64.302 MB</span></td><td>Information on the applications for granted patent</td><td>6,819,362</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/assignee.tsv.zip" target="_blank">assignee</a><span class="filesize">13.829 MB</span></td><td>Disambiguated assignee data</td><td>506,284</td><td>disamb</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/botanic.tsv.zip" target="_blank">botanic</a><span class="filesize">487.309 KB</span></td><td>Botanic information for plant patents</td><td>14,464</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/brf_sum_text.tsv.zip" target="_blank">brf_sum_text</a><span class="filesize">13.829 GB</span></td><td>Brief summary text</td><td>6,225,977</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/claim.tsv.zip" target="_blank">claim</a><span class="filesize">11.755 GB</span></td><td>Full text of patent claims, including dependency and sequence</td><td>96,694,250</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/cpc_current.tsv.zip" target="_blank">cpc_current</a><span class="filesize">1.019 GB</span></td><td>Current CPC classification data for all patents (applied retrospectively to all patents)</td><td>36,846,878</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/cpc_group.tsv.zip" target="_blank">cpc_group</a><span class="filesize">20.933 KB</span></td><td>Lookup table of current CPC groups</td><td>662</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/cpc_subgroup.tsv.zip" target="_blank">cpc_subgroup</a><span class="filesize">5.376 MB</span></td><td>Lookup table of current CPC subgroups</td><td>260,008</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/cpc_subsection.tsv.zip" target="_blank">cpc_subsection</a><span class="filesize">3.435 KB</span></td><td>Lookup table of current CPC subsections</td><td>128</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="mailto:contact@patentsview.org">detail_desc_text</a><span class="filesize">39.40 GB<br/>*provided upon request to contact@patentsview.org</span></td><td>Detailed patent description text</td><td>6,260,847</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/draw_desc_text.tsv.zip" target="_blank">draw_desc_text</a><span class="filesize">4.083 GB</span></td><td>Drawing description text</td><td>68,027,122</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/foreign_priority.tsv.zip" target="_blank">foreign_priority</a><span class="filesize">104.935 MB</span></td><td>Foreign priority data</td><td>3,191,918</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/figures.tsv.zip" target="_blank">figures</a><span class="filesize">141.372 MB</span></td><td>Number of figures and sheets</td><td>6,313,313</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/foreigncitation.tsv.zip" target="_blank">foreigncitation</a><span class="filesize">814.565 MB</span></td><td>Citations made to foreign patents by US patents</td><td>25,374,575</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/government_interest.tsv.zip" target="_blank">government_interest</a><span class="filesize">4.212 MB</span></td><td>Raw government interest statements on all patents (where available)</td><td>137,738</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/government_organization.tsv.zip" target="_blank">government_organization</a><span class="filesize">5.019 KB</span></td><td>Organization names and related agency hierarchy parsed from the government interest statements on all patents (where available)</td><td>247</td><td>processed</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/inventor.tsv.zip" target="_blank">inventor</a><span class="filesize">40.278 MB</span></td><td>Disambiguated inventor data</td><td>3,772,041</td><td>disamb</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/ipcr.tsv.zip" target="_blank">ipcr</a><span class="filesize">424.343 MB</span></td><td>International Patent Classification data for all patents (as of publication date)</td><td>13,854,255</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/lawyer.tsv.zip" target="_blank">lawyer</a><span class="filesize">5.083 MB</span></td><td>Disambiguated lawyer data</td><td>166,251</td><td>disamb</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/location.tsv.zip" target="_blank">location</a><span class="filesize">3.84 MB</span></td><td>Disambiguated location data, including latitude and longitude</td><td>141,189</td><td>disamb</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/location_assignee.tsv.zip" target="_blank">location_assignee</a><span class="filesize">13.988 MB</span></td><td>Metadata table for many-to-many relationships</td><td>506,284</td><td>disamb (linking table)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/location_inventor.tsv.zip" target="_blank">location_inventor</a><span class="filesize">172.881 MB</span></td><td>Metadata table for many-to-many relationships</td><td>3,771,982</td><td>disamb (linking table)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/mainclass.tsv.zip" target="_blank">mainclass</a><span class="filesize">2.534 KB</span></td><td>Lookup table of original USPC main classes (as of patent publication date)</td><td>1,237</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/mainclass_current.tsv.zip" target="_blank">mainclass_current</a><span class="filesize">7.515 KB</span></td><td>Lookup table of current USPC main technology classes (applied retrospectively to all patents)</td><td>510</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/nber.tsv.zip" target="_blank">nber</a><span class="filesize">110.807 MB</span></td><td>NBER classification data for all patents up to May 2015</td><td>5,105,937</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/nber_category.tsv.zip" target="_blank">nber_category</a><span class="filesize">456 bytes</span></td><td>Lookup table for NBER categories</td><td>6</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/nber_subcategory.tsv.zip" target="_blank">nber_subcategory</a><span class="filesize">871 bytes</span></td><td>Lookup table for NBER subcategories</td><td>37</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/non_inventor_applicant.tsv.zip" target="_blank">non_inventor_applicant</a><span class="filesize">178.309 MB</span></td><td>Non-inventor applicant information</td><td>3,546,627</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/otherreference.tsv.zip" target="_blank">otherreference</a><span class="filesize">2.902 GB</span></td><td>Non-patent citations mentioned in patents (e.g. articles, papers, etc.)</td><td>36,101,604</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/patent.tsv.zip" target="_blank">patent</a><span class="filesize">1.324 GB</span></td><td>Data on granted patents</td><td>6,819,362</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/patent_assignee.tsv.zip" target="_blank">patent_assignee</a><span class="filesize">98.657 MB</span></td><td>Metadata table for many-to-many relationships</td><td>6,070,101</td><td>disamb (linking table)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/patent_contractawardnumber.tsv.zip" target="_blank">patent_contractawardnumber</a><span class="filesize">915.027 KB</span></td><td>Contract or award numbers parsed from the government interest statements on all patents (where available)</td><td>116,771</td><td>processed</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/patent_govintorg.tsv.zip" target="_blank">patent_govintorg</a><span class="filesize">526.598 KB</span></td><td>Metadata table with patent-to-organization relationships linked to the government_organization table</td><td>161,866</td><td>processed</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/patent_inventor.tsv.zip" target="_blank">patent_inventor</a><span class="filesize">127.39 MB</span></td><td>Metadata table for many-to-many relationships</td><td>16,237,888</td><td>disamb (linking table)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/patent_lawyer.tsv.zip" target="_blank">patent_lawyer</a><span class="filesize">144.39 MB</span></td><td>Metadata table for many-to-many relationships</td><td>7,739,192</td><td>disamb (linking table)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/pct_data.tsv.zip" target="_blank">pct_data</a><span class="filesize">43.463 MB</span></td><td>PCT data</td><td>1,264,191</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/persistent_inventor_disambig.tsv.zip" target="_blank">persistent_inventor_disambig</a><span class="filesize">469.96 MB</span></td><td>Persistant Inventor Disambiguation</td><td>16,237,888</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/rawassignee.tsv.zip" target="_blank">rawassignee</a><span class="filesize">393.606 MB</span></td><td>Raw assignee information as it appears in the source text and XML files</td><td>6,070,101</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/rawexaminer.tsv.zip" target="_blank">rawexaminer</a><span class="filesize">290.439 MB</span></td><td>Raw examiner information</td><td>9,344,749</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/rawinventor.tsv.zip" target="_blank">rawinventor</a><span class="filesize">866.405 MB</span></td><td>Raw inventor information as it appears in the source text and XML files</td><td>16,237,888</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/rawlawyer.tsv.zip" target="_blank">rawlawyer</a><span class="filesize">390.825 MB</span></td><td>Raw lawyer information as it appears in the source text and XML files</td><td>7,739,192</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/rawlocation.tsv.zip" target="_blank">rawlocation</a><span class="filesize">840.103 MB</span></td><td>Raw location data for inventors and assignees, as it appears in xml and text source files</td><td>25,845,682</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/rel_app_text.tsv.zip" target="_blank">rel_app_text</a><span class="filesize">157.284 MB</span></td><td>Related applications text</td><td>1,617,202</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/subclass.tsv.zip" target="_blank">subclass</a><span class="filesize">591.386 KB</span></td><td>Lookup table of original USPC subclasses (as of patent publication date)</td><td>272,425</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/subclass_current.tsv.zip" target="_blank">subclass_current</a><span class="filesize">2.017 MB</span></td><td>Lookup table of current USPC subclasses (applied retrospectively to all patents)</td><td>171,053</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/us_term_of_grant.tsv.zip" target="_blank">us_term_of_grant</a><span class="filesize">76.21 MB</span></td><td>U.S. term of grant data</td><td>3,215,961</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/usapplicationcitation.tsv.zip" target="_blank">usapplicationcitation</a><span class="filesize">1.259 GB</span></td><td>Citations made to US patent applications by US patents</td><td>32,145,240</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/uspatentcitation.tsv.zip" target="_blank">uspatentcitation</a><span class="filesize">3.505 GB</span></td><td>Citations made to US granted patents by US patents</td><td>98,207,057</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/uspc.tsv.zip" target="_blank">uspc</a><span class="filesize">468.504 MB</span></td><td>USPC classification data for all patents</td><td>18,040,076</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/uspc_current.tsv.zip" target="_blank">uspc_current</a><span class="filesize">592.773 MB</span></td><td>Current USPC classification data for all patents up to May 2015</td><td>22,885,509</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/usreldoc.tsv.zip" target="_blank">usreldoc</a><span class="filesize">299.022 MB</span></td><td>U.S. related documents (post-2005 patents only)</td><td>9,222,837</td><td>raw</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/wipo.tsv.zip" target="_blank">wipo</a><span class="filesize">21.605 MB</span></td><td>WIPO technology fields for all patents</td><td>8,565,628</td><td>raw (from separate classification files)</td></tr>
+<tr><td><a href="http://s3.amazonaws.com/data.patentsview.org/20181127/download/wipo_field.tsv.zip" target="_blank">wipo_field</a><span class="filesize">1.731 KB</span></td><td>Lookup table of WIPO technology fields</td><td>70</td><td>raw (from separate classification files)</td></tr>
+
+</table>
+<div class="notes">
+<p>The PatentsView database is sourced from <a href="http://www.uspto.gov/" target="_blank">USPTO</a>-provided text and XML data on published patent applications (2001-most recent update) and granted patents (1976-most recent update). The current PatentsView database MySQL dump is available for download, upon request.  The patent applications database, which contains all granted and non-granted applications, is also available upon request.  After March, 2016, the applications database will not contain the same inventor IDs as the PatentsView database.  Only inventors on granted applications can be matched between the PatentsView and applications databases via a granted application ID.</p>
+<p>This work was created through a government contract funded by the Office of Chief Economist in the US Patent and Trademark Office. Users are free to use, share, or adapt the material for any purpose, subject to the standards of the Creative Commons Attribution 4.0 International License (<a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a>).</p>
+<p>Attribution should be given to PatentsView (<a href="www.patentsview.org">www.patentsview.org</a>) for use, distribution, or derivative works. 
+</p>
+<p>From the PatentsView database, simple assignee and lawyer disambiguations are performed, and the patents are geocoded with a location-based disambiguation. Data are then fed into the inventor disambiguation algorithm in order to identify clusters of inventor names that are determined to be the same individual. Because the disambiguation of inventor identities is an ongoing effort, there are likely to be errors observable in the PatentsView data tables. The team welcomes <a href="mailto:contact@patentsview.org">feedback</a> as we continue to improve our disambiguation methodology.</p>
+<p>For more information, visit the <a class="overlay-link" data-key="methodsSources" href="#">Methods and Sources</a> section of the website.</p>
+</div>
+</section>
+</div>
+<footer class="thin-footer"></footer>
+<div class="overlay"></div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//www.patentsview.org/web/js/headfoot.js?t=1442250609433"></script>
+</html>

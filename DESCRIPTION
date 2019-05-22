@@ -1,12 +1,26 @@
 Package: patviewer
 Title: Tools for working with PatentsView.org database
 Version: 0.0.0.9000
-Authors@R: 'Stas Vlasov <s.vlasov@uvt.nl> [aut, cre]'
-Description: Set of functions that help to prepare, to load into R session and to search PatentsView.org data
-Depends: R (>= 3.4.0)
+Date: 2019-05-22
+Authors@R: 
+    person(given = "Stanislav",
+           family = "Vlasov",
+           role = c("aut", "cre"),
+           email = "s.vlasov@uvt.nl")
+Description: Set of functions that help to prepare, to load
+    into R session and to search PatentsView.org data
 License: MIT License
+Depends: 
+    R (>= 3.4)
+Imports: 
+    data.table (>= 1.12),
+    dplyr (>= 0.8),
+    htmltab (>= 0.6),
+    magrittr (>= 1.4),
+    pbapply (>= 1.4.0),
+    stringr (>= 1.4.0),
+    XML (>= 3.97)
 Encoding: UTF-8
 LazyData: true
-Date: 2018-05-29
 References: http://patentsview.org
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
